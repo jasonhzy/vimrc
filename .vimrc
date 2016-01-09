@@ -254,3 +254,8 @@
   let g:multi_cursor_prev_key='<C-p>'
   let g:multi_cursor_skip_key='<C-x>'
   let g:multi_cursor_quit_key='<Esc>'
+  
+  "Tagbar settings
+  nmap <F8> :TagbarToggle<CR>   
+  let g:tagbar_autofocus = 1 
+
