@@ -29,7 +29,11 @@
   set softtabstop=4 " 使得按退格键时可以一次删掉 4 个空格
   set tabstop=4 " 设定 tab 长度为 4
   "set expandtab
+  set showmatch        " 设置匹配模式，显示匹配的括号
 
+  set hlsearch "highlight searches
+  set incsearch "do incremental searching
+  set ignorecase
 
   set wrap "turn on line wrapping
   set wrapmargin=8 " wrap lines when coming within n characters from side
@@ -37,6 +41,7 @@
 
   
   set autoindent " automatically set indent of new line
+  "set smartindent        " 智能对齐方式
 
    
   """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -111,6 +116,7 @@
   Plugin 'Valloric/YouCompleteMe'
   Plugin 'bling/vim-airline'
   Plugin 'majutsushi/tagbar'		
+  Plugin 'terryma/vim-multiple-cursors'
   Plugin 'tpope/vim-fugitive'		"git plugin
   Plugin 'kien/ctrlp.vim'			"search file plugin
   call vundle#end()            " required
@@ -168,7 +174,7 @@
   " map fuzzyfinder (CtrlP) plugin
   " nmap <silent> <leader>t :CtrlP<cr>
   " nmap <silent> <leader>r :CtrlPBuffer<cr>
-  nmap <C-S-r> :CtrlPBuffer<cr>
+  nmap <C-S-h> :CtrlPBuffer<cr>
   let g:ctrlp_map='<leader>t'
   let g:ctrlp_dotfiles=1
   let g:ctrlp_working_path_mode = 'ra'
@@ -236,3 +242,15 @@
   nnoremap <leader>gl :YcmCompleter GoToDeclaration<CR>           " 跳转到申明处
   nnoremap <leader>gf :YcmCompleter GoToDefinition<CR>            " 跳转到定义处
   nnoremap <leader>gg :YcmCompleter GoToDefinitionElseDeclaration<CR>
+
+  "minibufexplorer
+  "let g:miniBufExplorerMoreThanOne=0   "避免出现多个窗口
+
+  "multiple-cursors
+  let g:multi_cursor_use_default_mapping=0
+
+  " Default mapping
+  let g:multi_cursor_next_key='<C-n>'
+  let g:multi_cursor_prev_key='<C-p>'
+  let g:multi_cursor_skip_key='<C-x>'
+  let g:multi_cursor_quit_key='<Esc>'
