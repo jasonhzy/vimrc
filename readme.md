@@ -1,2 +1,2 @@
 # VIM IDE界面
-![vim ide](/images/vim-ide.png)
+![vim ide](https://jasonhzy.github.io/images/vim-ide.png)
